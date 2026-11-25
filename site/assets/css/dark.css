@@ -1,0 +1,103 @@
+/* REF Builders | dark.css  (Version 2: dark theme, loaded after site.css) */
+:root{
+  --ink:#f2f0eb; --char:#c9ccc7; --muted:#959c96;
+  --paper:#0f1110; --stone:#161917; --sand:#202421;
+  --forest:#1a1e1c; --sage-l:#232925; --sage-d:#aebcaa; --sage:#7f907b;
+  --line:rgba(255,255,255,.1); --line-light:rgba(255,255,255,.12);
+}
+body{background:var(--paper);color:var(--char)}
+h2 em,h1 em{color:rgba(242,240,235,.42)}
+.sec--dark{background:#0a0b0b}
+.grid-bg{background-color:var(--stone);background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px)}
+.eyebrow,.sec--stone .eyebrow{background:rgba(255,255,255,.07);color:var(--ink)}
+
+/* buttons and links */
+.btn{--orb:rgba(0,0,0,.32)}
+.btn--light{--bg:#f2f0eb;--fg:#111312;--orb:#111312}
+.btn--light:hover{--bg:#fff;--fg:#111312}
+.link-ar:hover svg,.pctl button:hover{background:var(--ink);color:#111312;border-color:var(--ink)}
+
+/* header: dark glass on every page */
+.hdr.is-inner .hdr__bar,.hdr.is-solid .hdr__bar,body.menu-open .hdr__bar{background:rgba(15,17,16,.82);border-color:rgba(255,255,255,.08);box-shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+.hdr .l-dark{display:none!important}
+.hdr .l-light{display:block!important}
+.hdr.is-inner .nav>ul>li:hover>.nav__a,.hdr.is-inner .nav__a[aria-current="page"]{background:rgba(255,255,255,.1)}
+.hdr.is-inner .burger,.hdr.is-solid .burger,body.menu-open .burger{background:rgba(255,255,255,.12)}
+.dd{background:rgba(22,25,23,.97);box-shadow:0 34px 70px -30px rgba(0,0,0,.9)}
+.dd .dd__all{background:var(--sage-l)}
+
+/* hero glow */
+.hero__media::after{background:linear-gradient(180deg,rgba(10,11,11,.6) 0%,rgba(10,11,11,.15) 32%,rgba(10,11,11,.3) 55%,rgba(10,11,11,.9) 100%)}
+.phero{background:radial-gradient(1200px 500px at 85% 0%,rgba(217,22,29,.08),transparent 60%),var(--paper)}
+
+/* cards and panels */
+.card__n{background:rgba(15,17,16,.7);color:#fff}
+.card__go{background:#f2f0eb;color:#111312}
+.ab__duo .pill-badge{background:#f2f0eb;color:#111312}
+.ab__b{border-color:var(--paper)!important}
+.ab__stat{background:#1b1f1d;box-shadow:0 24px 50px -20px rgba(0,0,0,.8)}
+.sx{background:var(--stone);box-shadow:0 40px 80px -40px rgba(0,0,0,.8);border:1px solid var(--line)}
+.sx__tile{background:#1d211f}
+.sx__tile:hover,.sx__tile:focus-visible,.sx__tile.on{background:#262b28;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.sx__go{background:#2f3531;color:var(--ink)}
+.sx__gh span{background:#262b28}
+.scard{background:var(--stone);border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(0,0,0,.9)}
+.stack__i{background:var(--stone)}
+.mappanel{background:#0a0b0b;border:1px solid var(--line)}
+.mappanel .cmap{background:#141716}
+.mapcard{background:#1b1f1d}
+.glass{background:rgba(15,17,16,.78);color:var(--ink)}
+.glass:hover{background:rgba(15,17,16,.94)}
+.vcard{box-shadow:0 30px 60px -40px rgba(0,0,0,.9)}
+.form-card{background:var(--stone);border:1px solid var(--line)}
+.fband__panel{background:#1a1e1c;border:1px solid var(--line)}
+.acc__ic{background:rgba(255,255,255,.07)}
+.cta-strip,.callout{background:#1d2320}
+
+/* forms */
+.fld input,.fld select,.fld textarea{color:var(--ink)}
+.fld select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23fff' stroke-width='1.4'/%3E%3C/svg%3E")}
+.fld select option{color:#111312}
+.fld input::placeholder,.fld textarea::placeholder{color:rgba(255,255,255,.3)}
+
+/* footer */
+.ftr{background:#0a0b0b}
+.ftr__social a{background:rgba(255,255,255,.07);color:var(--ink)}
+.ftr__social a:hover{background:var(--ink);color:#111312}
+.ftr__map{filter:grayscale(1) invert(.9) contrast(.9)}
+.hdr:not(.is-solid):not(.is-inner) .hdr__cta .btn{--bg:#f2f0eb;--fg:#111312;--orb:#111312}
+.cmap .pin circle.c{fill:#e9ece6}
+.cmap .pin circle.r{stroke:#e9ece6}
+.cmap .pin--hq circle.c{fill:var(--red)}
+
+/* service-area map (homepage): dark cartography */
+.amap{--am-land:#151816;--am-water:#0d1719;--am-ink:#f2f0eb;--am-mute:#8f9a97;box-shadow:inset 0 0 0 1px var(--line)}
+.am-water{stroke:#1d2e31}
+.am-area{fill:rgba(174,188,170,.07);stroke:#7f907b}
+.am-county{stroke:#3a403b}
+.am-topo{stroke:#1e2320}
+.am-road__c{stroke:#0f1110}
+.am-road{stroke:#2c322e}
+.am-sea{fill:#4f6f74}
+.am-mtn{fill:#6b716b}
+.am-shield{fill:#202421;stroke:#3a403b}
+.am-shield__t{fill:#c9ccc7}
+.am-dot{fill:#f2f0eb;stroke:#151816}
+.am-open{fill:#151816;stroke:#8f9a97}
+.am-hq{stroke:#151816}
+.am-hq__c{fill:#fff}
+.am-lb rect{fill:#222724;filter:drop-shadow(0 6px 14px rgba(0,0,0,.55))}
+.am-lb--dark rect{fill:#f2f0eb}
+.am-lb--dark .am-lb__n{fill:#111312}
+.am-lb--dark .am-lb__s{fill:rgba(17,19,18,.65)}
+.am-lb--dim .am-lb__n{fill:#a9b0ad}
+.am-pin:hover .am-lb rect,.am-pin:focus-visible .am-lb rect,.am-pin.on .am-lb rect{fill:#3a1c1d}
+.am-pin--home:hover .am-lb rect,.am-pin--home:focus-visible .am-lb rect,.am-pin--home.on .am-lb rect{fill:#fff}
+.amap__now,.amap__compass,.amap__legend,.amap__hint{background:rgba(22,25,23,.92);color:var(--ink);box-shadow:0 10px 30px -14px rgba(0,0,0,.8);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.amap__meta,.amap__hint,.amap__scale{color:#a9b0ad}
+.amap__scale span{border-color:#a9b0ad}
+.amap__compass svg{fill:var(--red)}
+.amap__reset{background:#2a2f2c;color:var(--ink)}
+.lg-home{box-shadow:0 0 0 2px #151816,0 0 0 3.5px var(--red)}
+.lg-city{background:#f2f0eb;border-color:#151816;box-shadow:0 0 0 1px #3a403b}
+.lg-area{background:rgba(174,188,170,.07);border-color:#7f907b}
