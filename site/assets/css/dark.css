@@ -121,13 +121,16 @@ h2 em,h1 em{color:rgba(242,240,235,.42)}
 .am-shield{rx:3px;ry:3px}
 
 /* ---------------------------------------------------------------
-   Version 2: headings in the logo's typeface, all caps.
-   The logo's "REF BUILDERS" is a heavy geometric sans; Montserrat is
-   the closest web font (no official brand font file exists).
+   Version 2 type: headings in Archivo Expanded, all caps. A wide,
+   sturdy geometric sans that echoes the logo's broad "REF BUILDERS"
+   lettering with more refined proportions. Paragraphs in Plus Jakarta
+   Sans. (No official brand font file exists.)
    --------------------------------------------------------------- */
-:root{--head:"Montserrat",system-ui,sans-serif}
-:is(h1,h2,h3,h4,h5,h6){text-transform:uppercase;font-weight:800!important;letter-spacing:-.01em!important}
-:is(h3,h4,h5,h6){font-weight:700!important;letter-spacing:.01em!important}
+:root{--head:"Archivo",system-ui,sans-serif;--body:"Plus Jakarta Sans",system-ui,sans-serif}
+:is(h1,h2,h3,h4,h5,h6){text-transform:uppercase;font-stretch:110%;font-weight:700!important;letter-spacing:.005em!important}
+:is(h3,h4,h5,h6){font-weight:600!important;letter-spacing:.02em!important}
+body{font-weight:400;letter-spacing:.003em}
+p{line-height:1.7}
 /* caps in a heavy face run ~35% wider: scale every heading context down */
 h1{font-size:clamp(34px,4.6vw,72px);line-height:1.02}
 h2{font-size:clamp(26px,3vw,46px);line-height:1.06}
@@ -162,7 +165,7 @@ h4{font-size:16px}
 .inset h2{max-width:20ch}
 .xcard__t{font-size:clamp(16px,1.3vw,19px)}
 .sx__h{font-size:clamp(21px,1.9vw,28px)}
-.acc__q{font-size:clamp(15px,1.1vw,17px);font-weight:700;letter-spacing:.01em;line-height:1.35;text-transform:uppercase}
+.acc__q{font-size:clamp(15px,1.1vw,17px);font-weight:600;font-stretch:112%;letter-spacing:.02em;line-height:1.4;text-transform:uppercase}
 /* bigger headings (Nov 26 feedback): ~25-30% up from the first caps pass */
 h1{font-size:clamp(40px,6vw,96px)}
 h2{font-size:clamp(30px,3.9vw,60px)}
@@ -192,8 +195,8 @@ h4{font-size:18px}
   .mapcard .county h3{font-size:14px}
 }
 /* longest single word (RECONSTRUCTION) must fit these columns */
-.ihero h1{font-size:clamp(32px,3.9vw,56px)}
-.faq__side h2{font-size:clamp(28px,3.5vw,53px)}
+.ihero h1{font-size:clamp(32px,3.75vw,54px)}
+.faq__side h2{font-size:clamp(28px,3.4vw,51px)}
 
 /* ---------------------------------------------------------------
    Version 2: wider sections, less padding (Nov 26 feedback)
@@ -205,3 +208,4 @@ h4{font-size:18px}
 .fband{padding:clamp(16px,2vw,28px) clamp(8px,1vw,14px)}
 .fband__panel{max-width:1680px;padding:clamp(44px,5vw,80px) 0}
 .ab__media .house--ab{right:-4%}
+@media (max-width:640px){h3{font-size:18px}.scope h3,.card h3{font-size:17px}}
