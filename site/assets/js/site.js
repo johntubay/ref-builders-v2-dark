@@ -275,6 +275,7 @@
     });
     var clamp=function(v){return v<0?0:v>1?1:v;};
     var fills=[], pars=[], band=null, bandImg=null;
+    var RND=getComputedStyle(document.documentElement).getPropertyValue("--round").trim()==="0"?0:1; /* v2 sets --round:0 for square corners */
     if(!reduce){
       fills=[].map.call(d.querySelectorAll("main h2[data-split]"),function(h){
         h.classList.add("fillh");
@@ -302,7 +303,7 @@
         var br=band.getBoundingClientRect();
         if(br.top<vh+40&&br.bottom>-40){
           var q=clamp((vh*.96-br.top)/(vh*.34));
-          band.style.clipPath=q>=1?"":"inset("+(5*(1-q)).toFixed(2)+"% "+(3*(1-q)).toFixed(2)+"% round "+(56-16*q).toFixed(1)+"px)";
+          band.style.clipPath=q>=1?"":"inset("+(5*(1-q)).toFixed(2)+"% "+(3*(1-q)).toFixed(2)+"% round "+((56-16*q)*RND).toFixed(1)+"px)";
           if(bandImg){ var z=clamp((vh-br.top)/(vh+br.height)); bandImg.style.transform="scale("+(1.2-.16*z).toFixed(3)+")"; }
         }
       }

@@ -101,3 +101,19 @@ h2 em,h1 em{color:rgba(242,240,235,.42)}
 .lg-home{box-shadow:0 0 0 2px #151816,0 0 0 3.5px var(--red)}
 .lg-city{background:#f2f0eb;border-color:#151816;box-shadow:0 0 0 1px #3a403b}
 .lg-area{background:rgba(174,188,170,.07);border-color:#7f907b}
+
+/* ---------------------------------------------------------------
+   Version 2: sharp, boxy edges. Every corner is square.
+   Map pins stay round (they're cartographic markers); the legend
+   dots match them.
+   --------------------------------------------------------------- */
+:root{--r-lg:0px;--r-md:0px;--r-sm:0px;--round:0}
+*,*::before,*::after{border-radius:0!important}
+.lg-area{border-radius:0!important}
+.amap__legend i.lg-home,.amap__legend i.lg-city{border-radius:50%!important}
+/* reveals that hard-code a rounded clip */
+@keyframes ih-frame{from{clip-path:inset(12% 8% 12% 8%);opacity:0}to{clip-path:inset(0);opacity:1}}
+.xcard{clip-path:inset(12% 8% 12% 8%)}
+.xcard.in{clip-path:inset(-90px)}
+/* map labels and freeway shields */
+.am-lb rect,.am-shield{rx:0;ry:0}

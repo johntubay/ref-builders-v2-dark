@@ -60,6 +60,8 @@ Don't hand-edit the generated `site/*.html` files, because the next build overwr
 ## Design system (Version 2 (Dark))
 **Version 2, dark:** the same components as v1 with `dark.css` layered on top. Palette: paper `#0f1110`, stone `#161917`, sand `#202421`, ink `#f2f0eb`, body text `#c9ccc7`, `.sec--dark` panels `#0a0b0b`, brand red `#d9161d` unchanged. White buttons (`.btn--light`), white logo in header and footer (`ref-logo-white.png`), dark glass header, and a dark-cartography version of the homepage service-area map. Any new component added in v1 needs a matching rule in `dark.css`.
 
+**Sharp, boxy edges (v2 only, Nov 26):** every corner is square. The end of `dark.css` sets `--r-lg/--r-md/--r-sm` to 0, forces `border-radius:0` on all elements, removes the rounding from the clip-path reveals (`ih-frame`, `.xcard`) and the map's label and shield rects, and sets `--round:0`. `site.js` reads `--round` so the footer band's clip-path reveal stays square too (v1 doesn't set it, so v1 is unchanged; port that one-line `site.js` change to v1 to keep the shared JS identical). Map pins and their two legend dots stay round on purpose.
+
 For reference, Version 1 (Light):
 **Version 1, light: "Modern architectural"** (inspired by Nuvo ADU and the Vericlean preview)
 - Palette in `site.css` `:root`: paper `#f8f7f3`, stone `#efece6`, ink `#1c1f1d`, forest `#262b28` (dark panels), sage `#8a9a86` / `#5f6f5c`, and brand red `#d9161d` on buttons and badges only.

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ref-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5520", "--directory", "C:/Users/Team Web/Documents/Apex Projects/02 - New Websites/ref-builders-v2-dark/site"],
+      "port": 5520
+    }
+  ]
+}
