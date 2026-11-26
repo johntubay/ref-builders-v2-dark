@@ -161,3 +161,34 @@ h4{font-size:16px}
 .xcard__t{font-size:clamp(16px,1.3vw,19px)}
 .sx__h{font-size:clamp(21px,1.9vw,28px)}
 .acc__q{font-size:clamp(15px,1.1vw,17px);font-weight:700;letter-spacing:.01em;line-height:1.35;text-transform:uppercase}
+/* bigger headings (Nov 26 feedback): ~25-30% up from the first caps pass */
+h1{font-size:clamp(40px,6vw,96px)}
+h2{font-size:clamp(30px,3.9vw,60px)}
+h3{font-size:clamp(19px,1.6vw,25px)}
+h4{font-size:18px}
+.phero h1{font-size:clamp(40px,5.6vw,90px)}
+.ihero h1{font-size:clamp(32px,4.2vw,64px)}
+.why h3{font-size:clamp(20px,1.8vw,27px)}
+.card h3,.scope h3{font-size:21px}
+.stack__i h3{font-size:clamp(23px,2.2vw,32px)}
+.county h3{font-size:18px}
+.pcard__b h3{font-size:clamp(23px,2.3vw,34px)}
+.faq-group>h2{font-size:clamp(24px,2.3vw,33px)}
+.prose h2{font-size:clamp(25px,2.6vw,38px)}
+.person h3{font-size:26px}
+.bcard h3{font-size:clamp(20px,1.9vw,28px)}
+.fcard__head h3{font-size:clamp(19px,1.7vw,24px)}
+.cta-strip h2{font-size:clamp(25px,2.7vw,40px)}
+.legal h2{font-size:clamp(20px,1.9vw,27px)}
+.sx__h{font-size:clamp(24px,2.3vw,34px)}
+.xcard__t{font-size:clamp(17px,1.4vw,20px)}
+.acc__q{font-size:clamp(16px,1.25vw,19px)}
+@media (max-width:640px){
+  .vcard h3,.scard h3{font-size:20px}
+  .mapcard h3{font-size:21px}
+  .mapcard--list h3{font-size:17px}
+  .mapcard .county h3{font-size:14px}
+}
+/* longest single word (RECONSTRUCTION) must fit these columns */
+.ihero h1{font-size:clamp(32px,3.9vw,56px)}
+.faq__side h2{font-size:clamp(28px,3.5vw,53px)}
