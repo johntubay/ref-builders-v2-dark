@@ -62,6 +62,8 @@ Don't hand-edit the generated `site/*.html` files, because the next build overwr
 
 **Sharp, boxy edges (v2 only, Nov 26):** every corner is square. The end of `dark.css` sets `--r-lg/--r-md/--r-sm` to 0, forces `border-radius:0` on all elements, removes the rounding from the clip-path reveals (`ih-frame`, `.xcard`) and the map's label and shield rects, and sets `--round:0`. `site.js` reads `--round` so the footer band's clip-path reveal stays square too (v1 doesn't set it, so v1 is unchanged; port that one-line `site.js` change to v1 to keep the shared JS identical). Map pins and their two legend dots stay round on purpose.
 
+**Headings in the logo's typeface, all caps (v2 only, Nov 26):** there is no brand font file, so v2 uses Montserrat, the closest web match to the heavy geometric "REF BUILDERS" lettering. The generator loads Montserrat instead of Outfit when `THEME = "dark"`, and `--head` points to it. Every h1 to h6, plus the FAQ questions, is uppercase: 800 weight for H1/H2, 700 for H3 and below. Heavy caps are about 35% wider, so `dark.css` scales each heading context down and widens the `ch`-based max-widths. When adding a heading style, check long words such as RECONSTRUCTION at 390px.
+
 For reference, Version 1 (Light):
 **Version 1, light: "Modern architectural"** (inspired by Nuvo ADU and the Vericlean preview)
 - Palette in `site.css` `:root`: paper `#f8f7f3`, stone `#efece6`, ink `#1c1f1d`, forest `#262b28` (dark panels), sage `#8a9a86` / `#5f6f5c`, and brand red `#d9161d` on buttons and badges only.
