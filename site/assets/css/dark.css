@@ -103,20 +103,22 @@ h2 em,h1 em{color:rgba(242,240,235,.42)}
 .lg-area{background:rgba(174,188,170,.07);border-color:#7f907b}
 
 /* ---------------------------------------------------------------
-   Version 2: sharp, boxy edges. Every corner is square.
+   Version 2: near-square edges. Every corner is a small 5px radius
+   (was 0; softened on Nov 26 feedback).
    Map pins stay round (they're cartographic markers); the legend
    dots match them.
    --------------------------------------------------------------- */
-:root{--r-lg:0px;--r-md:0px;--r-sm:0px;--round:0}
-*,*::before,*::after{border-radius:0!important}
-.lg-area{border-radius:0!important}
+:root{--r-lg:5px;--r-md:5px;--r-sm:5px;--round:5}
+*,*::before,*::after{border-radius:5px!important}
+.lg-area{border-radius:3px!important}
 .amap__legend i.lg-home,.amap__legend i.lg-city{border-radius:50%!important}
 /* reveals that hard-code a rounded clip */
-@keyframes ih-frame{from{clip-path:inset(12% 8% 12% 8%);opacity:0}to{clip-path:inset(0);opacity:1}}
-.xcard{clip-path:inset(12% 8% 12% 8%)}
-.xcard.in{clip-path:inset(-90px)}
+@keyframes ih-frame{from{clip-path:inset(12% 8% 12% 8% round 5px);opacity:0}to{clip-path:inset(0 round 5px);opacity:1}}
+.xcard{clip-path:inset(12% 8% 12% 8% round 5px)}
+.xcard.in{clip-path:inset(-90px round 5px)}
 /* map labels and freeway shields */
-.am-lb rect,.am-shield{rx:0;ry:0}
+.am-lb rect{rx:5px;ry:5px}
+.am-shield{rx:3px;ry:3px}
 
 /* ---------------------------------------------------------------
    Version 2: headings in the logo's typeface, all caps.
