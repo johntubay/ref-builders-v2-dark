@@ -192,3 +192,14 @@ h4{font-size:18px}
 /* longest single word (RECONSTRUCTION) must fit these columns */
 .ihero h1{font-size:clamp(32px,3.9vw,56px)}
 .faq__side h2{font-size:clamp(28px,3.5vw,53px)}
+
+/* ---------------------------------------------------------------
+   Version 2: wider sections, less padding (Nov 26 feedback)
+   content width 1360 -> 1600px, side gutters 56 -> 36px max,
+   section top/bottom padding 160 -> 112px max
+   --------------------------------------------------------------- */
+:root{--wrap:1600px;--gutter:clamp(16px,2.6vw,36px);--sec:clamp(64px,7vw,112px)}
+.inner main .sec--dark{margin:0 clamp(8px,1vw,14px)}
+.fband{padding:clamp(16px,2vw,28px) clamp(8px,1vw,14px)}
+.fband__panel{max-width:1680px;padding:clamp(44px,5vw,80px) 0}
+.ab__media .house--ab{right:-4%}

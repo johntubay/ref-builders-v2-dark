@@ -64,6 +64,8 @@ Don't hand-edit the generated `site/*.html` files, because the next build overwr
 
 **Headings in the logo's typeface, all caps (v2 only, Nov 26):** there is no brand font file, so v2 uses Montserrat, the closest web match to the heavy geometric "REF BUILDERS" lettering. The generator loads Montserrat instead of Outfit when `THEME = "dark"`, and `--head` points to it. Every h1 to h6, plus the FAQ questions, is uppercase: 800 weight for H1/H2, 700 for H3 and below. Heavy caps are about 35% wider, so `dark.css` sets every heading context explicitly (bumped ~25-30% on Nov 26 at the client's request; `.ihero h1` and `.faq__side h2` are capped so RECONSTRUCTION fits) and widens the `ch`-based max-widths. When adding a heading style, check long words such as RECONSTRUCTION at 390px.
 
+**Wider sections, less padding (v2 only, Nov 26):** `dark.css` raises `--wrap` from 1360px to 1600px, cuts `--gutter` to 16-36px and `--sec` (section top/bottom padding) to 64-112px, pulls the inner-page dark panels and footer form band closer to the screen edge (8-14px), and widens the form band to 1680px.
+
 For reference, Version 1 (Light):
 **Version 1, light: "Modern architectural"** (inspired by Nuvo ADU and the Vericlean preview)
 - Palette in `site.css` `:root`: paper `#f8f7f3`, stone `#efece6`, ink `#1c1f1d`, forest `#262b28` (dark panels), sage `#8a9a86` / `#5f6f5c`, and brand red `#d9161d` on buttons and badges only.
