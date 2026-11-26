@@ -122,13 +122,13 @@ h2 em,h1 em{color:rgba(242,240,235,.42)}
 
 /* ---------------------------------------------------------------
    Version 2 type: headings in Anton (all caps), paragraphs in
-   Be Vietnam Pro. Anton has a single 400 weight, so weights are
+   Jost (refined geometric sans). Anton has a single 400 weight, so weights are
    pinned to 400 to stop the browser faking bold.
    --------------------------------------------------------------- */
-:root{--head:"Anton",Impact,"Arial Narrow",sans-serif;--body:"Be Vietnam Pro",system-ui,sans-serif}
+:root{--head:"Anton",Impact,"Arial Narrow",sans-serif;--body:"Jost",system-ui,sans-serif}
 :is(h1,h2,h3,h4,h5,h6){text-transform:uppercase;font-weight:400!important;letter-spacing:.01em!important;line-height:1.06}
 :is(h3,h4,h5,h6){letter-spacing:.02em!important}
-body{font-weight:400;letter-spacing:0}
+body{font-weight:400;letter-spacing:.005em}
 html{font-synthesis-weight:none}
 p{line-height:1.7}
 /* caps in a heavy face run ~35% wider: scale every heading context down */
