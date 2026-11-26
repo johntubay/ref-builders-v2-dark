@@ -431,7 +431,7 @@ def page_home():
   <div class="hero__media"><video data-auto autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-poster.jpg" aria-hidden="true"><source src="assets/video/ref-hero.mp4" type="video/mp4"></video></div>
   <div class="wrap hero__in">
     <div class="hero__grid">
-      <div class="hero__head">{eyebrow("General Contractor in Campbell, CA")}<h1 data-split>Built right. <em>From foundation to finish.</em></h1></div>
+      <div class="hero__head">{eyebrow("General Contractor in Campbell, CA")}<h1 data-split>Built right. <em>From foundation</em> <span class="ol">to finish.</span></h1></div>
       <div class="hero__side"><p class="hero__sub rv" style="--d:4">New homes, remodels, additions and ADUs across the Bay Area, led by Roberto and Paula with honest communication at every phase.</p><div class="rv" style="--d:5">{btn("Start Your Project", light=True)}</div></div>
     </div>
   </div>

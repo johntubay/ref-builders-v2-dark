@@ -220,3 +220,6 @@ h4{font-size:18px}
 .hero__side{max-width:620px;justify-self:center;display:flex;flex-direction:column;align-items:center}
 .hero__sub{margin-bottom:24px}
 .hero__media::after{background:radial-gradient(ellipse 75% 55% at 50% 78%,rgba(10,11,11,.55),transparent 75%),linear-gradient(180deg,rgba(10,11,11,.6) 0%,rgba(10,11,11,.35) 40%,rgba(10,11,11,.45) 70%,rgba(10,11,11,.85) 100%)}
+
+/* homepage hero: "to finish." as a thick outline (Nov 26 feedback) */
+.hero h1 .ol .w>span{background:none!important;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:max(3px,.06em) #f0464c;paint-order:stroke fill;padding:0 .02em}
